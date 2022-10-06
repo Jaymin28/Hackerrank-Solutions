@@ -1,0 +1,13 @@
+def misereNim(s):
+    # Write your code here
+    from functools import reduce
+    if set(s) == {1}:
+        if len(s) % 2 == 0:
+            return 'First'
+        else :
+            return 'Second'
+    res = reduce((lambda x,y:x^y), s)
+    if res == 0:
+        return 'Second'
+    else :
+        return 'First'
